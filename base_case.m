@@ -40,7 +40,7 @@ function data = base_case(input_p, nelx, nely)
         u99(i) = ut(j,i);
         y99(i) = N(j,i);
         integrand = 1 - abs(ut(1:j,i))/Uv(i);
-        if j<2
+        if j<3
           dth(i) = 0;
         else
           dth(i) = trapz(N(1:j,i),integrand);
