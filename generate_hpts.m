@@ -40,7 +40,12 @@ y = interp1(XA,YA,x);
 %y = YA; 
 %[d,D1,D2,W] = chebmat_trans(70,15e-3,5e-3);
 %d = linspace(0,0.08,5)*1e-3;
-z = linspace(-0.035, 0.035, 61);
+ymax=0.01;
+N=50;
+beta = linspace(0,pi/2,N);
+d = (1-cos(beta))/2*ymax*2;
+
+z = linspace(-0.035, 0.035, 251);
 z = z(1:end-1);
 
 
