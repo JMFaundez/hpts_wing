@@ -10,9 +10,16 @@ d99 = data.y99(ix0:end);
 xa = XA(ix0:end);
 ya = YA(ix0:end);
 
+
+bf_diego = load('baseFlow.mat');
+
+[mask,xcontour,ycontour] = blWeights(bf_diego);
+
+
 figure()
 hold on
 plot(xa,3*dth)
+plot(xcontour,ycontour)
 plot(xa,d99)
 xlabel('x')
 ylabel('\delta')
