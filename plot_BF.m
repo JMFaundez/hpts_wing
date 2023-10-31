@@ -25,7 +25,7 @@ figure()
 hold on
 contourf(X,Y,data.ux,30,'LineStyle','none')
 colorbar()
-plot(xa,ya+dth)
+plot(xa,ya+real(dth))
 axis equal
 xlabel('x')
 ylabel('y')
