@@ -23,7 +23,7 @@ Y = data.yy;
 
 figure()
 hold on
-contourf(X,Y,data.vx,30,'LineStyle','none')
+contourf(X,Y,data.ux,30,'LineStyle','none')
 colorbar()
 plot(xa,ya+dth)
 axis equal
