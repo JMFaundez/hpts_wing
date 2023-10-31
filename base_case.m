@@ -62,6 +62,7 @@ function data = base_case(input_p, nelx, nely)
   data.xx = xx;
   data.yy = yy;
   data.ut = ut;
+  data.ux = vx;
   data.Uv = Uv;
   data.dth = dth;
   data.y99 = y99;

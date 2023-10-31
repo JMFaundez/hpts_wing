@@ -8,6 +8,7 @@ YA = data.yy(1,:); % y coordinate points at the surface
 dth = data.dth(ix0:end);
 d99 = data.y99(ix0:end);
 xa = XA(ix0:end);
+ya = YA(ix0:end);
 
 figure()
 hold on
@@ -22,10 +23,11 @@ Y = data.yy;
 
 figure()
 hold on
-contourf(X,Y,data.ut,30,'LineStyle','none')
+contourf(X,Y,data.vx,30,'LineStyle','none')
+colorbar()
+plot(xa,ya+dth)
 axis equal
 xlabel('x')
 ylabel('y')
-colorbar()
 
 
