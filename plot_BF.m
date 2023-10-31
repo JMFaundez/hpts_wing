@@ -12,7 +12,7 @@ ya = YA(ix0:end);
 
 figure()
 hold on
-plot(xa,dth)
+plot(xa,3*dth)
 plot(xa,d99)
 xlabel('x')
 ylabel('\delta')
