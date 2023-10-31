@@ -16,3 +16,16 @@ plot(xa,d99)
 xlabel('x')
 ylabel('\delta')
 
+
+X = data.xx;
+Y = data.yy;
+
+figure()
+hold on
+contourf(X,Y,data.ut,30,'LineStyle','none')
+axis equal
+xlabel('x')
+ylabel('y')
+colorbar()
+
+
