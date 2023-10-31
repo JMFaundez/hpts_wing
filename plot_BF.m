@@ -18,9 +18,10 @@ bf_diego = load('baseFlow.mat');
 
 figure()
 hold on
-plot(xa,3*dth)
-plot(xcontour,ycontour)
-plot(xa,d99)
+plot(xa,ya'+3*real(dth),'3\delta^*')
+plot(xa,ya'+d99,'my d99')
+plot(xcontour,ycontour,'diego')
+legend()
 xlabel('x')
 ylabel('\delta')
 
@@ -33,6 +34,7 @@ hold on
 contourf(X,Y,data.ux,30,'LineStyle','none')
 colorbar()
 plot(xa,ya'+3*real(dth),'r--','LineWidth',1.5)
+plot(xcontour,ycontour,'g-','LineWidth',1.5)
 axis equal
 xlabel('x')
 ylabel('y')
