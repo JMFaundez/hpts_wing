@@ -12,9 +12,12 @@ E = 0.1015;
 naca = @(x) 5*0.08*(A*sqrt(x) - B*x - C*x.^2 + D*x.^3 - E*x.^4);
 dnaca = @(x) 5*0.08*(0.5*A*1/sqrt(x) - B - 2*C*x + 3*D*x.^2 - 4*E*x.^3);
 
-xf = 0.55;
-xi = 0.01;
-step = 8;
+dt_sn=0.01;
+
+xf = 0.45;
+xi = 0.05;
+dx = 0.7*dt_sn;
+step = 1;
 
 data = base_case('fringe_m50.f00001',230,30);
 XA = data.xx(1,:); % x coordinate points at the surface
@@ -31,11 +34,11 @@ figure()
 plot(XA,YA,'.')
 axis('equal')
 
-%x = linspace(0.002, 0.34,100);
-%y = naca(x);
-x = XA;
-y = YA; 
-[d,D1,D2,W] = chebmat_trans(70,15e-3,5e-3);
+x = xi:dx:xf;
+y = interp1(XA,YA,x);
+%x = XA;
+%y = YA; 
+%[d,D1,D2,W] = chebmat_trans(70,15e-3,5e-3);
 %d = linspace(0,0.08,5)*1e-3;
 z = linspace(-0.035, 0.035, 61);
 z = z(1:end-1);
