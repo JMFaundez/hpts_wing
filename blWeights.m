@@ -14,7 +14,7 @@ function [mask,xcontour,ycontour] = blWeights(bf)
         yi = Y(i,:);
         di = sqrt((xi-xi(1)).^2+(yi-yi(1)).^2);
         vi = abs(vortz(i,:));
-        vortThr = 0.01*vi(1); % Vorticity threashold
+        vortThr = 0.05*vi(1); % Vorticity threashold
     
         for j=1:ny-1
             if vortThr < vi(j) && vortThr > vi(j+1)

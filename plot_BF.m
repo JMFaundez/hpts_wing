@@ -18,9 +18,9 @@ bf_diego = load('baseFlow.mat');
 
 figure()
 hold on
-plot(xa,ya'+3*real(dth),'DisplayName','3\delta^*')
-plot(xa,ya'+d99,'DisplayName','my d99')
-plot(xcontour,ycontour,'DisplayName','diego')
+plot(xa,3*real(dth),'DisplayName','3\delta^*')
+plot(xa,d99,'DisplayName','my d99')
+plot(xcontour-bf_diego.X(:,1),ycontour-bf_diego.Y(:,1),'DisplayName','diego')
 legend()
 xlabel('x')
 ylabel('\delta')
